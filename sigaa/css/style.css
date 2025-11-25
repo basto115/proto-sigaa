@@ -95,3 +95,38 @@ h2 {
     background: #c0392b;
 }
 
+.page-container {
+    text-align: center;
+    padding: 30px;
+}
+
+.tabla {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.tabla th {
+    background: #3498db;
+    color: white;
+
+}
+
+.back-btn {
+    margin-top: 25px;
+    background: #2ecc71;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: #27ae60;
+}
