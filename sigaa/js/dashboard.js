@@ -1,0 +1,52 @@
+//obtener tipo usuario desde login
+const tipo = localStorage.getItem("tipoUsuario");
+document.getElementById("tipo").textContent = "Perfil: " + tipo;
+
+//añadir botones
+const contenedor = document.getElementById("opciones");
+
+let botones = [];
+
+//según tipo usuario
+if (tipo === "alumno") {
+    botones = [
+        { texto: "Matrícula", link: "matricula.html" },
+        { texto: "Notas", link: "notas.html" },
+        { texto: "Pagos", link: "pagos.html" },
+        { texto: "Certificados", link: "#" }
+    ];
+}
+
+if (tipo === "docente"){
+    botones = [
+        { texto: "Mis cursos", link: "#"},
+        { texto: "Subir notas", link: "#"},
+        { texto: "Asistencia", link: "#"}
+    ];
+}
+
+if (tipo === "admin") {
+    botones = [
+        { texto: "Gestión Usuarios", link:"#"},
+        { texto: "Reportes", link:"#"},
+        { texto: "Pagos", link:"pagos.html"},
+        { texto: "Configuraciones", link:"#"}
+    ];
+}
+
+//renderizado botones
+
+botones.forEach(b => {
+    let btn = document.createElement("button");
+    btn.className = "opcion-btn";
+    btn.textContent = b.texto;
+    btn.onclick = () => window.location.href = b.link;
+    contenedor.appendChild(btn);
+});
+
+//cerrar sesión
+
+function logout() {
+    localStorage.removeItem("tipoUsuario");
+    window.location.href = "index.html";
+}

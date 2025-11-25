@@ -54,3 +54,44 @@ h2 {
     margin-top: 10px;
     height: 20px;
 }
+
+.dashboard-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.opciones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.opciones-btn {
+    padding: 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.opciones-btn:hover {
+    background: #2980b9;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    background: #e74c3c;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
