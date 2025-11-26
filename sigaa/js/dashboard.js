@@ -13,7 +13,7 @@ if (tipo === "alumno") {
         { texto: "Matrícula", link: "matricula.html" },
         { texto: "Notas", link: "notas.html" },
         { texto: "Pagos", link: "pagos.html" },
-        { texto: "Certificados", link: "#" }
+        { texto: "Certificados", link: "certificados.html" }
     ];
 }
 
@@ -27,7 +27,7 @@ if (tipo === "docente"){
 
 if (tipo === "admin") {
     botones = [
-        { texto: "Gestión Usuarios", link:"#"},
+        { texto: "Gestión Usuarios", link:"gestion-usuarios.html"},
         { texto: "Reportes", link:"#"},
         { texto: "Pagos", link:"pagos.html"},
         { texto: "Configuraciones", link:"#"}

@@ -24,7 +24,7 @@ h2 {
 
 .login-box {
     background: white;
-    padding: 25px;
+    padding: 80px;
     width: 280px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #ccc;
@@ -149,6 +149,55 @@ h2 {
 
 .tabla th {
     background: #3498db;
+    color: white;
+}
+
+.back-btn {
+    margin-top: 25px;
+    background: #2ecc71;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: #27ae60;
+}
+
+.page-container{
+    text-align: center;
+    padding: 30px;
+}
+
+.add-btn {
+    margin-bottom: 20px;
+    background: #16a085;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1abc9c;
+}
+
+.tabla {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.tabla th {
+    background:  #3498db;
     color: white;
 }
 

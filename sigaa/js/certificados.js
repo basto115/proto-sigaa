@@ -19,6 +19,8 @@ certificados.forEach(c => {
         <td>${c.estado}</td>
         <td><a href="${c.link}" class="download-link" ${c.estado === "Aprobado" ? "" : "disabled"}>Descargar</a></td>
     `;
+
+    tabla.appendChild(fila);
 });
 
 function volver() {
