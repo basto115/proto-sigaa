@@ -17,6 +17,8 @@ asignaturas.forEach(a => {
         <td>${a.nombre}</td>
         <td>${a.estado}</td>
     `;
+
+    tabla.appendChild(fila);
 });
 
 //volver dashboard
