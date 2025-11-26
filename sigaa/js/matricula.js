@@ -1,5 +1,5 @@
 //dato bruto matricula
-const asignatura = [
+const asignaturas = [
     { nombre: "Programación web" ,estado: "Inscrita"},
     { nombre: "Base de datos" ,estado: "Inscrita"},
     { nombre: "Arquitectura de sistemas" ,estado: "Disponible"},
