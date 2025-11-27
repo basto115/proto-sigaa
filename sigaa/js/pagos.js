@@ -1,9 +1,9 @@
 //datos para pagos
 const pagos = [
-    { fecha: "2025-05-10", monto: 120000,  estado: "Pagado"},
-    { fecha: "2025-06-15", monto: 120000,  estado: "Pendiente"},
-    { fecha: "2025-07-20", monto: 120000,  estado: "Pagado"},
-    { fecha: "2025-08-05", monto: 120000,  estado: "Pendiente"}
+    { fecha: "2025-05-10", monto: "$"+120000,  estado: "Pagado"},
+    { fecha: "2025-06-15", monto: "$"+120000,  estado: "Pendiente"},
+    { fecha: "2025-07-20", monto: "$"+120000,  estado: "Pagado"},
+    { fecha: "2025-08-05", monto: "$"+120000,  estado: "Pendiente"}
 ];
 
 const tabla = document.getElementById("tabla-pagos");

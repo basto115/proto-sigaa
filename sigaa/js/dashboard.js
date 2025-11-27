@@ -19,8 +19,8 @@ if (tipo === "alumno") {
 
 if (tipo === "docente"){
     botones = [
-        { texto: "Mis cursos", link: "#"},
-        { texto: "Subir notas", link: "#"},
+        { texto: "Mis cursos", link: "mis-cursos.html"},
+        { texto: "Subir notas", link: "subir-notas.html"},
         { texto: "Asistencia", link: "#"}
     ];
 }
