@@ -12,13 +12,11 @@
         <h2>SIGAA</h2>
         <p class="sub"> Sistema Integrado de Gestión Académica y Administrativa</p>
         <div class="login-box">
-            <input type="text" id="user" placeholder="Usuario">
-            <input type="password" id="pass" placeholder="Contraseña">
-
-            <button onclick="login()">Ingresar</button>
-
+            <form onsubmit="event.preventDefault(); login()"> 
+                <input type="text" id="user" placeholder="Usuario" required> <input type="password" id="pass" placeholder="Contraseña" required>
+                <button type="submit">Ingresar</button>
+            </form>
             <p id="error" class="error-msg"></p>
-
         </div>
     </div>
 

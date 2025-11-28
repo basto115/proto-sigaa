@@ -1,3 +1,8 @@
+// Si no hay usuario guardado, mandar al login de una
+if (!localStorage.getItem("tipoUsuario")) {
+    window.location.href = "index.html";
+}
+
 //obtener tipo usuario desde login
 const tipo = localStorage.getItem("tipoUsuario");
 document.getElementById("tipo").textContent = "Perfil: " + tipo;

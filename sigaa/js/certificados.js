@@ -1,11 +1,11 @@
 //datos certificado
 
 const certificados = [
-    { curso: "Desarrollo de aplicaciones web", estado: "aprobado", link: "#"},
-    { curso: "Introducción a la base de datos", estado: "aprobado", link: "#"},
-    { curso: "Arquitectura de sistemas", estado: "pendiente", link: "#"},
-    { curso: "Gestión de proyectos TI", estado: "aprobado", link: "#"},
-    { curso: "Ética profesional", estado: "aprobado", link: "#"},
+    { curso: "Alumno Regular", estado: "Disponible", link: "#"},
+    { curso: "Notas Parciales", estado: "Disponible", link: "#"},
+    { curso: "Título en Trámite", estado: "Pendiente", link: "#"},
+    { curso: "Concentración de Notas", estado: "Bloqueo Financiero", link: "#"},
+    { curso: "Progreso Académico", estado: "Disponible", link: "#"},
 ];
 
 const tabla = document.getElementById("tabla-certificados");
@@ -17,7 +17,7 @@ certificados.forEach(c => {
     fila.innerHTML = `
         <td>${c.curso}</td>
         <td>${c.estado}</td>
-        <td><a href="${c.link}" class="download-link" ${c.estado === "Aprobado" ? "" : "disabled"}>Descargar</a></td>
+        <td><a href="${c.link}" class="download-link" ${c.estado === "Disponible" ? "" : "disabled"}>Descargar</a></td>
     `;
 
     tabla.appendChild(fila);
