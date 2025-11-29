@@ -1,7 +1,7 @@
 let estudiantes = JSON.parse(localStorage.getItem("notas_data")) || [
     { nombre: "Ellie Williams", n1: "", n2: "" },
     { nombre: "Shanks Figarland", n1: "", n2: "" },
-    { nombre: "Jhon Doe", n1: "", n2: "" }, 
+    { nombre: "John Doe", n1: "", n2: "" }, 
     { nombre: "Jane Doe", n1: "", n2: "" },
     { nombre: "Gordon Freeman", n1: "", n2: "" }
 ];
