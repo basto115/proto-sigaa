@@ -1,11 +1,28 @@
-// Si no hay usuario guardado, mandar al login de una
-if (!localStorage.getItem("tipoUsuario")) {
-    window.location.href = "index.html";
+// --- SEGURIDAD DE SESIÓN (Anti-Back Button) ---
+function verificarSesion() {
+    // Si NO hay usuario guardado, patear al login
+    if (!localStorage.getItem("tipoUsuario")) {
+        window.location.replace("index.html"); // .replace evita guardar historial
+    }
 }
+
+// 1. Verificar apenas carga el script
+verificarSesion();
+
+// 2. Verificar si el usuario vuelve usando el botón "Atrás"
+window.addEventListener('pageshow', function(event) {
+    verificarSesion();
+});
+// ----------------------------------------------
+
 
 //obtener tipo usuario desde login
 const tipo = localStorage.getItem("tipoUsuario");
-document.getElementById("tipo").textContent = "Perfil: " + tipo;
+
+// Un pequeño safety check por si 'tipo' es null para que no rompa el textContent
+if (tipo) {
+    document.getElementById("tipo").textContent = "Perfil: " + tipo;
+}
 
 //añadir botones
 const contenedor = document.getElementById("opciones");
@@ -40,18 +57,20 @@ if (tipo === "admin") {
 }
 
 //renderizado botones
-
-botones.forEach(b => {
-    let btn = document.createElement("button");
-    btn.className = "opcion-btn";
-    btn.textContent = b.texto;
-    btn.onclick = () => window.location.href = b.link;
-    contenedor.appendChild(btn);
-});
+// Limpiamos el contenedor antes por si acaso
+if(contenedor) {
+    contenedor.innerHTML = ""; 
+    botones.forEach(b => {
+        let btn = document.createElement("button");
+        btn.className = "opcion-btn";
+        btn.textContent = b.texto;
+        btn.onclick = () => window.location.href = b.link;
+        contenedor.appendChild(btn);
+    });
+}
 
 //cerrar sesión
-
 function logout() {
     localStorage.removeItem("tipoUsuario");
-    window.location.href = "index.html";
+    window.location.replace("index.html"); // Usamos replace aquí también para más seguridad
 }
