@@ -1,18 +1,25 @@
-// --- SEGURIDAD DE SESIÓN (Anti-Back Button) ---
+// --- SEGURIDAD DE SESIÓN ---
 function verificarSesion() {
-    // Si NO hay usuario guardado, patear al login
     if (!localStorage.getItem("tipoUsuario")) {
-        window.location.replace("index.html"); // .replace evita guardar historial
+        // 1. Ocultar todo el contenido inmediatamente para que no se vea nada
+        document.body.style.display = "none"; 
+        // 2. Patear al login borrando historial
+        window.location.replace("index.html"); 
     }
 }
 
-// 1. Verificar apenas carga el script
+// Ejecutar al cargar
 verificarSesion();
 
-// 2. Verificar si el usuario vuelve usando el botón "Atrás"
+// Ejecutar si vuelven con el botón "Atrás"
 window.addEventListener('pageshow', function(event) {
+    // Si la página se cargó desde la memoria caché (persisted), forzamos recarga
+    if (event.persisted) {
+        window.location.reload();
+    }
     verificarSesion();
 });
+// ---------------------------
 // ----------------------------------------------
 
 
